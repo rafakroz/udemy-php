@@ -4,6 +4,16 @@
 
 --
 
+Configurar Nome do Usuário:
+```
+git config --local user.name "xxxx"
+```
+
+Configurar E-mail do Usuário:
+```
+git config --local user.email "xxxx"
+```
+
 Criar branch:
 ```
 git checkout -b [nome da branch] ou git branch [nome da branch]
