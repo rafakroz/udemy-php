@@ -43,3 +43,15 @@
     echo "(A - C) / B = $subDiv2";
     echo "<br>";
     echo "<br>";
+    
+        
+    echo "Resolução instrutor:";
+    echo "<br>";
+
+    $a = 10;
+    $x = 5;
+    $z = 9;
+
+    $operacao = ($x - $z) / $a * $z;
+
+    echo $operacao;
