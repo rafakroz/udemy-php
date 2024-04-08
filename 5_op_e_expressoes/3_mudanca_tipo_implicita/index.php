@@ -21,6 +21,6 @@
     $nome = "Rafael";
     $sobrenome = "Queiroz";
 
-    $nomeCompleto = $nome . " " . $sobrenome;
+    $nomeCompleto = $nome . " " . $sobrenome;  // Concatenando 2 variáveis, ou melhor, o resultado delas
 
     echo $nomeCompleto;
