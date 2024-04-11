@@ -11,16 +11,16 @@
         echo "<br><br>";
     }
     else {
-        echo "O valor/tipo de " . '$a' . " (Interiro: $a) é idêntico ao valor/tipo de " . '$b' . " (Interiro: $b).";
+        echo "O valor/tipo de " . '$a' . " (Inteiro: $a) é idêntico ao valor/tipo de " . '$b' . " (Inteiro: $b).";
         echo "<br><br>";
     }
 
     if ($a !== $c){
-        echo "O valor/tipo de " . '$a' . " (Inteiro: $a) não é idêntico ao valor/tipo de " . '$c' . " (Interiro: $c).";
+        echo "O valor/tipo de " . '$a' . " (Inteiro: $a) não é idêntico ao valor/tipo de " . '$c' . " (Inteiro: $c).";
         echo "<br><br>";
     }
     else {
-        echo "O valor/tipo de " . '$a' . " (Interiro: $a) é idêntico ao valor/tipo de " . '$c' . " (Interiro:$c).";
+        echo "O valor/tipo de " . '$a' . " (Interiro: $a) é idêntico ao valor/tipo de " . '$c' . " (Inteiro:$c).";
         echo "<br><br>";
     }
 
@@ -29,6 +29,6 @@
         echo "<br><br>";
     }
     else {
-        echo "O valor/tipo de " . '$a' . " (Interiro: $a) é idêntico ao valor/tipo de " . '$d' . " (String: $d).";
+        echo "O valor/tipo de " . '$a' . " (Inteiro: $a) é idêntico ao valor/tipo de " . '$d' . " (String: $d).";
         echo "<br><br>";
     }
