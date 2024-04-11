@@ -6,29 +6,34 @@
     $d = "5";
     $e = "teste";
 
+    // gettype para exibir o tipo de dado
+
+    // Teste 1
     if ($a !== $b){
-        echo "O valor/tipo de " . '$a' . " (Inteiro: $a) não é idêntico ao valor/tipo de " . '$b' . " (Inteiro: $b).";
+        echo "O tipo/valor de " . '$a' . " (" . gettype($a) . ": $a) não é idêntico ao tipo/valor de " . '$b' . " (" . gettype($b) . ": $b).";
         echo "<br><br>";
     }
     else {
-        echo "O valor/tipo de " . '$a' . " (Inteiro: $a) é idêntico ao valor/tipo de " . '$b' . " (Inteiro: $b).";
+        echo "O tipo/valor de " . '$a' . " (" . gettype($a) . ": $a) é idêntico ao tipo/valor de " . '$b' . " (" . gettype($b) . ": $b).";
         echo "<br><br>";
     }
 
+    // Teste 2
     if ($a !== $c){
-        echo "O valor/tipo de " . '$a' . " (Inteiro: $a) não é idêntico ao valor/tipo de " . '$c' . " (Inteiro: $c).";
+        echo "O tipo/valor de " . '$a' . " (" . gettype($a) . ": $a) não é idêntico ao tipo/valor de " . '$c' . " (" . gettype($c) . ": $c).";
         echo "<br><br>";
     }
     else {
-        echo "O valor/tipo de " . '$a' . " (Interiro: $a) é idêntico ao valor/tipo de " . '$c' . " (Inteiro:$c).";
+        echo "O tipo/valor de " . '$a' . " (" . gettype($a) . ": $a) é idêntico ao tipo/valor de " . '$c' . " (" . gettype($c) . ": $c).";
         echo "<br><br>";
     }
 
+    // Teste 3
     if ($a !== $d){
-        echo "O valor/tipo de " . '$a' . " (Inteiro: $a) não é idêntico ao valor/tipo de " . '$d' . " (String: $d).";
+        echo "O tipo/valor de " . '$a' . " (" . gettype($a) . ": $a) não é idêntico ao tipo/valor de " . '$d' . " (" . gettype($d) . ": $d).";
         echo "<br><br>";
     }
     else {
-        echo "O valor/tipo de " . '$a' . " (Inteiro: $a) é idêntico ao valor/tipo de " . '$d' . " (String: $d).";
+        echo "O tipo/valor de " . '$a' . " (" . gettype($a) . ": $a) é idêntico ao tipo/valor de " . '$d' . " (" . gettype($d) . ": $d).";
         echo "<br><br>";
     }
