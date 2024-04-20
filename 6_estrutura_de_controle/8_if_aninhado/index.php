@@ -108,17 +108,5 @@
             echo "Entrou no if interno 4! <br>";
 
             echo $escopo;
-
-        } else {
-
-            echo "Entrou no else do if interno 4! <br>";
-
-        }
     }
-    else {
-
-        echo "Entrou no else do if 4! <br>";
-
-    }
-    
-    
+}
