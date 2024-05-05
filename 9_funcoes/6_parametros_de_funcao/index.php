@@ -43,7 +43,7 @@ $velocidade2 = 150;
 velocidadeMaxima($velocidade);
 
 //O PHP vai ignorar o parâmetro desnecessário, pois a função só aceita um
-velocidadeMaxima($velocidade2, "Teste");
+//velocidadeMaxima($velocidade2, "Teste");
 
 //Passando um tipo de dado diferente
 velocidadeMaxima("Teste");
