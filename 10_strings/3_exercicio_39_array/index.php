@@ -14,7 +14,7 @@
 
     */
 
-    $arr = [
+    $arr = [ //array associativo
         'porta' => 100,
         'maçaneta' => 5,
         'motor' => 2000,
@@ -27,7 +27,7 @@
 
         $arrItensCaros = []; //novo array
 
-        foreach ($arr as $item => $preco) {
+        foreach ($arr as $item => $preco) { //estrutura de repetição orienta a um array
 
             if ($preco > 10) {
 
