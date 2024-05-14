@@ -1,5 +1,7 @@
 <?php
 
+// contar elementos do array
+
 $arr = range(1, 8);
 
 print_r($arr);
