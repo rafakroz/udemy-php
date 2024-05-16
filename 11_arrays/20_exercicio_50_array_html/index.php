@@ -22,6 +22,16 @@ $pessoas = [
 // th = table heading
 // td = table data
 
+// A cada repetição do foreach, será gerada uma tr / linha
+
+/*
+Completo
+<?php echo
+
+Forma abreviada
+<?=
+*/
+
 ?>
 
 <table border="1">
@@ -32,7 +42,7 @@ $pessoas = [
     <?php foreach ($pessoas as $nome => $idade): ?>
         <tr>
             <td>
-                <?= $nome; ?>
+                <?php echo $nome; ?>
             </td>
             <td>
                 <?= $idade; ?>
