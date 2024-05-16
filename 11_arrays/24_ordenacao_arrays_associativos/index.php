@@ -24,7 +24,14 @@ echo "<br><br>";
 
 asort($arr1); // valor contido nas chaves
 
-echo "Array Associativo 1 ordenado com asort: <br>";
+echo "Array Associativo 1 ordenando valores com asort: <br>";
+print_r($arr1);
+
+echo "<br><br>";
+
+arsort($arr1); // valor contido nas chaves
+
+echo "Array Associativo 1 ordenando valores (reverso) com arsort: <br>";
 print_r($arr1);
 
 echo "<br><br>";
@@ -47,7 +54,12 @@ echo "<br><br>";
 
 ksort($arr2); // valor contido nas chaves
 
-echo "Array Associativo 2 ordenado com ksort: <br>";
+echo "Array Associativo 2 ordenando chaves com ksort: <br>";
 print_r($arr2);
 
 echo "<br><br>";
+
+krsort($arr2); // valor contido nas chaves
+
+echo "Array Associativo 2 ordenando chaves (reverso) com krsort: <br>";
+print_r($arr2);
