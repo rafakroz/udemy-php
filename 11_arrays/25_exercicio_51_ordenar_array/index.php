@@ -11,7 +11,7 @@ EXERCÍCIO 51
 
 */
 
-$notas = [
+$alunos = [
     'Rafael' => 10.0,
     'Matheus Amancio' => 1.0,
     'Gabriel' => 9.5,
@@ -20,32 +20,42 @@ $notas = [
     'Felipe' => 8.9
 ];
 
-print_r($notas);
+print_r($alunos);
 
 echo "<br><br>";
 
-arsort($notas);
+arsort($alunos);
 
-print_r($notas);
+print_r($alunos);
 
 echo "<br><br>";
 
 //-----------------------
 ?>
 
-<table border="1">
+
+<!-- <table border="1">
     <tr>
         <th>Nome</th>
         <th>Nota</th>
     </tr>
-    <?php foreach ($notas as $nome => $nota): ?>
+    <?php foreach ($alunos as $nome => $notas): ?>
         <tr>
             <td>
                 <?php echo $nome; ?>
             </td>
             <td>
-                <?php echo $nota; ?>
+                <?php echo $notas; ?>
             </td>
         </tr>
     <?php endforeach; ?>
-</table>
+</table> -->
+
+<h1>Ranking</h1>
+<ol>
+    <?php foreach ($alunos as $nome => $notas): ?>
+        <li>
+            <?php echo $nome; ?>: <?php echo $notas; ?>
+        </li>
+    <?php endforeach; ?>
+</ol>
