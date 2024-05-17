@@ -33,6 +33,15 @@ echo "<br><br>";
 //-----------------------
 ?>
 
+<h1>Ranking</h1>
+<ol>
+    <?php foreach ($alunos as $nome => $notas): ?>
+        <li>
+            <?php echo $nome; ?>: <?php echo $notas; ?>
+        </li>
+        <?php endforeach; ?>
+</ol>
+
 
 <!-- <table border="1">
     <tr>
@@ -50,12 +59,3 @@ echo "<br><br>";
         </tr>
     <?php endforeach; ?>
 </table> -->
-
-<h1>Ranking</h1>
-<ol>
-    <?php foreach ($alunos as $nome => $notas): ?>
-        <li>
-            <?php echo $nome; ?>: <?php echo $notas; ?>
-        </li>
-    <?php endforeach; ?>
-</ol>
