@@ -39,13 +39,9 @@ class Animal {
 
 $frida = new Animal;
 
-echo "O nome do animal é: $frida->nome <br><br>";
+echo "O nome do animal é: $frida->nome <br><br>"; // O nome não será impresso, pois não foi definido.
 
-// O nome não será impresso, pois não foi definido.
-
-$frida->escolherNome("Frida");
-
-// Nome definido. Será impresso normalmente
+$frida->escolherNome("Frida"); // Nome definido. Será impresso normalmente
 
 echo "O nome do animal é: $frida->nome <br><br>";
 
