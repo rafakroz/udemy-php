@@ -38,6 +38,6 @@ $bmw = new Car("BMW", "Preta", 4);
 
 echo "A minha nova " . $bmw->marca . "é da cor " . $bmw->cor . "." . "<br><br>";
 
-$ferrari = new Car("Ferrari", "Vermelha", 0);
+$ferrari = new Car("Ferrari", "Vermelha", 2);
 
 echo "A minha nova " . $ferrari->marca . "é da cor " . $ferrari->cor . " e tem " . $ferrari->portas . " portas." . "<br><br>";
