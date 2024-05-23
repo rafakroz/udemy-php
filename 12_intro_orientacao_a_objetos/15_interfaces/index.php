@@ -29,7 +29,7 @@ class Humano implements Caracteristicas {
 
     public function falar() {
 
-        echo "Saudações! Eu sou " . self::NOME . "! Tenho $this->idade anos!" . "<br>";
+        echo "Saudações! Eu sou " . Caracteristicas::NOME . "! Tenho $this->idade anos!" . "<br>";
 
     }
 
