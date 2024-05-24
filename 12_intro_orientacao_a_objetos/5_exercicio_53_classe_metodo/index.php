@@ -11,7 +11,7 @@ EXERCÍCIO 53
 
 */
 
-class Cachorro {
+class Cachorro1 {
 
     function latir($raca){
 
@@ -27,8 +27,8 @@ class Cachorro {
 
 }
 
-$bulldog = new Cachorro;
-$pitbull = new Cachorro;
+$bulldog = new Cachorro1;
+$pitbull = new Cachorro1;
 
 $bulldog -> latir("Bulldog");
 $bulldog -> andar(50);
