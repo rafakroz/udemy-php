@@ -1,6 +1,8 @@
 <?php
 
     include_once("helpers/url.php");
+    include_once("data/posts.php");
+    include_once("data/categories.php");
 
 ?>
 
@@ -25,16 +27,16 @@
         <nav>
             <ul id="navbar">
                 <li>
-                    <a href="<?= $BASE_URL ?>">Home</a>
+                    <a href="<?= $BASE_URL ?>" class="nav-link">Home</a>
                 </li>
                 <li>
-                    <a href="#">Categorias</a>
+                    <a href="#" class="nav-link">Categorias</a>
                 </li>
                 <li>
-                    <a href="#">Sobre</a>
+                    <a href="#" class="nav-link">Sobre</a>
                 </li>
                 <li>
-                    <a href="<?= $BASE_URL ?>contato.php">Contato</a>
+                    <a href="<?= $BASE_URL ?>contato.php" class="nav-link">Contato</a>
                 </li>
             </ul>
         </nav>
