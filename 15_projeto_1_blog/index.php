@@ -16,7 +16,7 @@
                 <div class="post-box">
                     <img src="<?= $BASE_URL ?>img/<?= $post['img'] ?>" alt="<?= $post['title'] ?>">
                     <h2 class="post-title">
-                        <a href="<?= $BASE_URL ?>posts.php?id=<?= $post['id'] ?>"><?= $post['title'] ?></a>
+                        <a href="<?= $BASE_URL ?>post.php?id=<?= $post['id'] ?>"><?= $post['title'] ?></a>
                     </h2>
                     <p class="post-desciption"><?= $post['description'] ?></p>
 
@@ -33,6 +33,6 @@
 
 <?php
 
-include_once("templates/footer.php");
+    include_once("templates/footer.php");
 
 ?>
