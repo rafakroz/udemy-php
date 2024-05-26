@@ -19,13 +19,12 @@
                         <a href="<?= $BASE_URL ?>posts.php?id=<?= $post['id'] ?>"><?= $post['title'] ?></a>
                     </h2>
                     <p class="post-desciption"><?= $post['description'] ?></p>
-                </div>
 
-                <div class="tags-container">
-                    <?php foreach($post['tags'] as $tag) : ?>
-                        <a href="#"><?= $tag ?></a>
-                    <?php endforeach; ?>
-
+                    <div class="tags-container">
+                        <?php foreach($post['tags'] as $tag) : ?>
+                            <a href="#"><?= $tag ?></a>
+                        <?php endforeach; ?>
+                    </div>
                 </div>
 
             <?php endforeach; ?>
