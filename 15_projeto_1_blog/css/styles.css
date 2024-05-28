@@ -258,8 +258,7 @@ footer {
     #post-container {
         grid-template-columns: 100%;
         padding: 15px;
-        grid-template-areas: "main"
-        "sidebar";
+        grid-template-areas: "main" "sidebar";
     }
 
     .img-container img {
