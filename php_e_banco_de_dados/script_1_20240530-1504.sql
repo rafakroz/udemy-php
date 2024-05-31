@@ -164,6 +164,53 @@ where nome = 'Abajur' OR id_item > 5
 
 
 
+-- 300. Ordenando resultados
+-- ORDER BY email asc
+
+select * from itens order by id_item desc
+
+SELECT * from itens where id_item > 2 order by nome;
+
+SELECT * from itens where id_item > 2 order by nome desc;
+
+
+
+-- 301. Atualizando dados
+/*
+UPDATE tabela
+SET coluna = valor1
+WHERE condicao
+*/
+
+select * from mailmarketing
+
+insert into mailmarketing (email, nome) values ('fred@teste.com', 'Fred');
+insert into mailmarketing (email, nome) values ('suzy@teste.com', 'Suzy');
+insert into mailmarketing (email, nome) values ('nina@teste.com', 'Nina');
+
+select * from itens
+
+update itens
+set nome = 'Abajur Retrô'
+where id_item = 8
+
+
+
+-- 302. Deletando dados
+/* DELETE FROM tabela
+Where condicao */
+
+-- Sem Where, deleta a tabela toda
+
+select * from mailmarketing
+
+insert into mailmarketing (email, nome) values ('teste@teste.com', 'Teste');
+
+delete from mailmarketing
+where nome = 'Teste'
+
+
+
 
 
 
