@@ -115,6 +115,54 @@ INSERT INTO itens (nome, descricao) values ('Rack de Madeira','Rack de Madeira, 
 
 
 
+-- 297. Selecionando dados
+-- SELECT * FROM tabela
+
+SELECT * FROM itens
+
+SELECT nome FROM itens
+
+
+
+-- 298. Utilizando WHERE
+/*
+SELECT colunas
+FROM tabela
+WHERE condição
+*/
+
+SELECT * from  itens
+where nome = 'Sofá';
+
+select nome from itens
+where id_item > 3
+
+select id_item, nome from itens
+where id_item > 3
+
+
+
+-- 299. Utilizando condicionais
+-- AND, OR, NOT
+-- where condicao1 and condicao2
+
+select * from itens 
+where id_item = 2 or id_item = 5;
+
+INSERT INTO itens (nome, descricao) VALUES ('Abajur', 'Modelo da linha retrô.');
+
+select * from itens
+where nome = 'Abajur'
+
+update itens set nome = 'Abajur' where id_item = 1
+
+select * from itens
+where nome = 'Abajur' AND id_item = 8
+
+select * from itens
+where nome = 'Abajur' OR id_item > 5
+
+
 
 
 
