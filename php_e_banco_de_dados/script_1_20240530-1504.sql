@@ -83,8 +83,35 @@ INSERT into mailmarketing (email, nome) values ('rafael@teste.com', 'Fred') -- e
 
 
 
+-- 295. CONSTRAINT: PRIMARY KEY
+
+CREATE TABLE itens (
+	id_item serial PRIMARY key,  -- Serial : auto incremento
+	nome varchar(255),
+	descricao text	
+)
+
+insert into itens (nome, descricao) values ('Abajar', 'Abajur da nova coleção.');
+insert into itens (nome, descricao) values ('Penteadeira', 'Pendeteadeira estilo retrô.');
+insert into itens (nome, descricao) values ('Mesa de Jantar', 'Mesa de Jantar para 10 pessoas.');
+
+select * from itens;
+
+delete from itens where id_item = 3
+
+insert into itens (nome, descricao) values ('Sofá', 'Sofá 3 lugares.');
+
+-- mesmo excluindo o id 3, o id da última inserção foi 4.
 
 
+-- 296. Inserindo itens
+-- INSERT INTO tabela (coluna, ...) VALUES (valor, ...)
+
+select * from itens;
+
+INSERT INTO itens (nome, descricao) values ('Lustre de Cristal','Luestre de Cristal translúcido');
+INSERT INTO itens (nome, descricao) values ('Fogão 5 Bocas','Fogão branco com 5 Bocas.');
+INSERT INTO itens (nome, descricao) values ('Rack de Madeira','Rack de Madeira, para TV de até 65 polegadas.');
 
 
 
