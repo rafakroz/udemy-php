@@ -211,7 +211,46 @@ where nome = 'Teste'
 
 
 
+-- 303. Criando usuários no Banco
+/*
+[PHPmyAdmin]
 
+• Podemos criar usuários no banco, deopis utilizá-los para conectar e realizar as queries;
+
+• Além de criar precisamos adicionar os privilégios;
+
+• Exemplo:
+
+CREATE USER 'usuário'@'localhost' IDENTIFIED BY 'senha';
+GRANT ALL PRIVILEGS ON 	*.* TO 'USUARIO'@'locahost';
+FLUSH PRIVILEGES;
+
+*/
+
+SELECT usename FROM pg_user
+
+select user
+
+
+
+-- 304. mysqli x PDO
+
+
+
+-- 305. Conectando com mysqli
+/*
+
+• Para conectar ao MySQL com o mysqli utilizamos a função mysqli_connect;
+
+• Passamos os parâmetros de: host, usuario, senha e banco de dados;
+
+• Com a conexão feita podemos utilizar as queries;
+
+• Exemplo: 
+
+	$conn = new mysqli("host", "user", "pass", "db");
+
+*/
 
 
 
