@@ -41,11 +41,13 @@ $descricao = "Cama Box com dimensões Queen.";
 
 $stmt = $conn->prepare("INSERT INTO itens (nome, descricao) VALUES (?, ?)");
 
-// Tipo de dados e as variáveis com os dados
-// s : string
-// i : integer
-// d : double
+// Tipo de dados e as variáveis com os dados:
+// s = string
+// i = integer
+// d = double
 
 $stmt->bind_param("ss", $nome, $descricao);
 
 $stmt->execute();
+
+$conn->close();
