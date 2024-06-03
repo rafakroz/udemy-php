@@ -1,0 +1,8 @@
+326. Criando o banco de dados
+
+CREATE TABLE contacts (
+	id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    	name CHARACTER VARYING (150),
+    	phone CHARACTER VARYING (20),
+    	observations TEXT
+)
