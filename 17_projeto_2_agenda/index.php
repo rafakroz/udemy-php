@@ -15,7 +15,25 @@
         <h1 id="main-title">Minha Agenda</h1>
         <?php if(count($contacts) > 0): ?>
 
-            <p>TEM CONTATOS</p>
+            <table class="table" id="contacts-table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Telefone</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach($contacts as $contact): ?>
+                        <tr>
+                            <td scope="row"><?= $contact['id'] ?></td>
+                            <td scope="row"><?= $contact['nome'] ?></td>
+                            <td scope="row"><?= $contact['telefone'] ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
 
         <?php else: ?>
 

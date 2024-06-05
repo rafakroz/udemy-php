@@ -18,8 +18,4 @@
 
     $contacts = [];
 
-    /**
-     * Recebe todos os dados por meio da PDO
-     */
     $contacts = $stmt->fetchAll();
-
