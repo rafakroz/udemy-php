@@ -6,3 +6,14 @@ CREATE TABLE contacts (
     	phone CHARACTER VARYING (20),
     	observations TEXT
 )
+
+
+*** Inserindo os contatos
+
+INSERT INTO contacts (name, phone, observations) VALUES ('Rafael Queiroz', '(21) 98877-6655', 'Fornecedor de produtos de Informática');
+
+INSERT INTO contacts (name, phone, observations) VALUES ('Suzy Queiroz', '(21) 97766-5544', 'Fornecedora de produtos de Limpeza');
+
+INSERT INTO contacts (name, phone, observations) VALUES ('Fred Snow', '(21) 96655-4433', 'Fornecedor de produtos Alimentícios');
+
+INSERT INTO contacts (name, phone, observations) VALUES ('Nina Queiroz', '(21) 95544-3322', 'Fornecedora de produtos de Limpeza');
