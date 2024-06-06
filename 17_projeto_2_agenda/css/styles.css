@@ -23,13 +23,15 @@
 }
 
 .actions {
-    text-align: right;
+    /* text-align: right; aula */
+    text-align: center;
     width: 150px;
 }
 
 .actions i {
     font-size: 18px;
-    margin-right: 5px;
+    /* margin-right: 5px; aula */
+    margin-right: 15px;
 }
 
 .check-icon {
