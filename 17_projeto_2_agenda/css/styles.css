@@ -98,3 +98,11 @@
     border: 1px solid #026cdd;
     color: #026cdd;
 }
+
+/* CREATE */
+
+#create-form,
+#edit-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
