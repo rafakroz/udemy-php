@@ -106,3 +106,12 @@
     max-width: 600px;
     margin: 0 auto;
 }
+
+/* MOBILE */
+@media (max-width: 480px){
+
+    #home-link {
+        display: none;
+    }
+
+}
