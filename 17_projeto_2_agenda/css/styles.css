@@ -23,14 +23,14 @@
 }
 
 .actions {
-    /* text-align: right; aula */
-    text-align: center;
+    text-align: right;
+    /* text-align: center; */
     width: 150px;
 }
 
 .actions i {
-    font-size: 18px;
-    /* margin-right: 5px; aula */
+    /* font-size: 18px; */
+    margin-right: 5px;
     margin-right: 15px;
 }
 
@@ -40,6 +40,10 @@
 
 .edit-icon {
     color: #007bff;
+}
+
+.delete-form {
+    display: inline-block;
 }
 
 .delete-btn {
