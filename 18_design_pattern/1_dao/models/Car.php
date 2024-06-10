@@ -28,7 +28,7 @@
         }
 
         public function setKm($km) {
-            $this->km = $km;
+            $this->km = intval($km);
         }
 
         public function getColor() {
@@ -38,4 +38,11 @@
         public function setColor($color) {
             $this->color = $color;
         }
+    }
+
+    interface CarDAOInterface {
+
+        public function create(Car $car);
+
+        public function findAll();
     }
