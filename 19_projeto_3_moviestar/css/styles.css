@@ -1,3 +1,52 @@
-body {
-    background-color: #ccc;
+/* NAVBAR */
+
+.navbar-brand {
+    position: relative;
 }
+
+#logo {
+    width: 50px;
+}
+
+#moviestar-title {
+    color: #fff;
+    position: absolute;
+    bottom: -2px;
+    font-size: 30px;
+    left: 55px;
+    font-weight: bold;
+}
+
+#main-navbar {
+    background-color: #121212;
+}
+
+#search-form {
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 5px;
+    width: 50%;
+    margin-left: 180px;
+}
+
+#search-form .form-control {
+    border: none;
+    width: 90%;
+    box-shadow: none;
+}
+
+#navbar {
+    min-width: 30%;
+}
+
+.navbar-nav {
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+
+/* FOOTER */
