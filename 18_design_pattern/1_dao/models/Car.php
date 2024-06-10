@@ -38,6 +38,10 @@
         public function setColor($color) {
             $this->color = $color;
         }
+
+        public function __construct()
+        {
+        }
     }
 
     interface CarDAOInterface {
