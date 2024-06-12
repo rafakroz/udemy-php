@@ -37,12 +37,25 @@ class Message {
     // Pegar mensagem
     public function getMessage() {
 
+        if (!empty($_SESSION['msg'])) {
 
+            return [
+                'msg' => $_SESSION["msg"],
+                'type'=> $_SESSION["type"],
+            ];
+
+        } else {
+
+            return false;
+
+        }
     }
 
-    // Limpar a mensagem no sistema
+    // Limpar a mensagem no sistema ao recarregar ou acessar outra página
     public function clearMessage() {
 
+        $_SESSION['msg'] = '';
+        $_SESSION['type'] = '';
 
     }
 }

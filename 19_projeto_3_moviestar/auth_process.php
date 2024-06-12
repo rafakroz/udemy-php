@@ -27,7 +27,7 @@ if ($type === 'register') {
     } else {
 
         // Exibe o erro manda de volta para a tela de login
-        $message->setMessage('Por favor, preencha todos os campos.', 'error', 'back');
+        $message->setMessage("Por favor, preencha todos os campos.", "error", "back");
 
     }
 
