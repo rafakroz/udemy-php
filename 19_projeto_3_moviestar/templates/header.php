@@ -2,6 +2,7 @@
     require_once("globals.php");
     require_once("db.php");
     require_once("models/Message.php");
+    require_once("dao/UserDAO.php");
 
     $message = new Message($BASE_URL);
 
@@ -11,6 +12,12 @@
         // Limpar mensagem
         $message->clearMessage();
     }
+
+    $userDao = new UserDAO($conn, $BASE_URL);
+
+    // Vai permitir que usuário não logado acessem o site
+    $userDao = $userDao->verifyToken(false);
+
 ?>
 
 <!DOCTYPE html>
@@ -46,9 +53,13 @@
             </form>
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a href="<?php $BASE_URL ?>auth.php" class="nav-link">Entrar / Cadastrar</a>
-                    </li>
+                    <?php if($userData): ?>
+                    <p>Tá logado</p>
+                    <?php else: ?>
+                        <li class="nav-item">
+                            <a href="<?php $BASE_URL ?>auth.php" class="nav-link">Entrar / Cadastrar</a>
+                        </li>
+                    <?php endif; ?>
                 </ul>
             </div>
         </nav>
