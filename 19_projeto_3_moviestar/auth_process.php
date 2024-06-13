@@ -26,11 +26,12 @@ if ($type === 'register') {
     if($name && $lastname && $email && $password) {
 
         // Verificar se as senhas estão iguais
-        if ($password === $confirmpassaword) {
+        if ($password === $confirmpassword) {
 
             // Verificar se o E-mail já está cadastrado no sistema
             if ($userDao->findByEmail($email) === false) {
 
+<<<<<<< HEAD
                 // Instanciando o objeto
                 $user = new User();
 
@@ -40,16 +41,29 @@ if ($type === 'register') {
                 $finalPassword = $user->generatePassword($password);
 
                 // Dados recebidos dos inputs
+=======
+                $user = new User();
+
+                //
+                $userToken = $user->generateToken();
+                $finalPassword = $user->generatePassword($password);
+
+>>>>>>> 4b8e306 (Etapa corrigida)
                 $user->name = $name;
                 $user->lastname = $lastname;
                 $user->email = $email;
                 $user->password = $finalPassword;
                 $user->token = $userToken;
 
+<<<<<<< HEAD
                 // Autenticando o usuário
                 $auth = true;
 
                 // Neste método, a conta é criada e autenticada ao mesmo tempo
+=======
+                $auth = true;
+
+>>>>>>> 4b8e306 (Etapa corrigida)
                 $userDao->create($user, $auth);
 
             } else {
