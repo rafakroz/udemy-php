@@ -14,6 +14,22 @@ class User {
     public $bio;
     public $token;
 
+    public function generateToken() {
+
+        return bin2hex(random_bytes(50));
+
+    }
+
+
+    public function generatePassword($password) {
+
+        // password_hash = função do php que cria uma hash para a senha]
+        // $password = senha recebida do usuário
+        // PASSWORD_DEFAULT = caso haja alguma alteração do padrão de senha do php, será alterada para default
+        return password_hash($password, PASSWORD_DEFAULT);
+
+    }
+
 }
 
 // Métodos que o DAO poderá usar

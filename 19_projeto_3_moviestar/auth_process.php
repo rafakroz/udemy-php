@@ -20,7 +20,7 @@ if ($type === 'register') {
     $lastname = filter_input(INPUT_POST,'lastname');
     $email = filter_input(INPUT_POST,'email');
     $password = filter_input(INPUT_POST,'password');
-    $confirmpassaword = filter_input(INPUT_POST,'confirmpassword');
+    $confirmpassword = filter_input(INPUT_POST,'confirmpassword');
 
     // Verificação de dados mínimos
     if($name && $lastname && $email && $password) {
@@ -31,7 +31,26 @@ if ($type === 'register') {
             // Verificar se o E-mail já está cadastrado no sistema
             if ($userDao->findByEmail($email) === false) {
 
-                echo "Nenhum usuário foi encontrado!";
+                // Instanciando o objeto
+                $user = new User();
+
+                // Criação de token e senha
+                $userToken = $user->generateToken();
+
+                $finalPassword = $user->generatePassword($password);
+
+                // Dados recebidos dos inputs
+                $user->name = $name;
+                $user->lastname = $lastname;
+                $user->email = $email;
+                $user->password = $finalPassword;
+                $user->token = $userToken;
+
+                // Autenticando o usuário
+                $auth = true;
+
+                // Neste método, a conta é criada e autenticada ao mesmo tempo
+                $userDao->create($user, $auth);
 
             } else {
 
