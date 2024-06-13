@@ -23,8 +23,8 @@ class UserDAO implements UserDAOInterface {
         $user->email = $data['email'];
         $user->password = $data['password'];
         $user->image = $data['image'];
-        $user->bio = $data['bio'];
         $user->token = $data['token'];
+        $user->bio = $data['bio'];
 
         // Retorna o objeto a quem chamar
         return $user;
@@ -32,6 +32,17 @@ class UserDAO implements UserDAOInterface {
     }
 
     public function create(User $user, $authUser = false) {
+
+        $stmt = $this->conn->prepare('INSERT INTO users (name, lastname, email, password, token)
+                                      VALUES (:name, :lastname, :email, :password, :token)');
+
+        $stmt->bindParam(':name', $user->name);
+        $stmt->bindParam(':lastname', $user->lastname);
+        $stmt->bindParam(':email', $user->email);
+        $stmt->bindParam(':password', $user->password);
+        $stmt->bindParam(':token', $user->token);
+
+        $stmt->execute();
 
     }
 
