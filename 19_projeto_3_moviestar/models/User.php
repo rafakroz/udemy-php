@@ -14,28 +14,16 @@ class User {
     public $bio;
     public $token;
 
-<<<<<<< HEAD
-=======
     //
->>>>>>> 4b8e306 (Etapa corrigida)
     public function generateToken() {
 
         return bin2hex(random_bytes(50));
 
     }
 
-<<<<<<< HEAD
-
-    public function generatePassword($password) {
-
-        // password_hash = função do php que cria uma hash para a senha]
-        // $password = senha recebida do usuário
-        // PASSWORD_DEFAULT = caso haja alguma alteração do padrão de senha do php, será alterada para default
-=======
     //
     public function generatePassword($password) {
 
->>>>>>> 4b8e306 (Etapa corrigida)
         return password_hash($password, PASSWORD_DEFAULT);
 
     }
