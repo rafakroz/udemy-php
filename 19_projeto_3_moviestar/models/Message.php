@@ -19,12 +19,13 @@ class Message {
 
         $_SESSION['msg'] = $msg;
         $_SESSION['type'] = $type;
+        var_dump($redirect);
 
         // back = voltar para para a última página
         if ($redirect != 'back') {
 
             // Será redirecionado para o index
-            header("Location: $this->url()". $redirect);
+            header("Location: $this->url". $redirect);
 
         } else {
 
