@@ -39,7 +39,7 @@ interface UserDAOInterface {
     public function create(User $user, $authUser = false);
 
     // Atualizar usuário no sistema
-    public function update(User $user);
+    public function update(User $user, $redirect = true);
 
     // Verifica o token [False, fica sem proteção, sem rota protegida]
     public function verifyToken($protected = false);
