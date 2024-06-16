@@ -52,7 +52,7 @@
             </form>
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="navbar-nav">
-                    <!-- Se o usuário estiver logado -->
+                    <!-- Nav, Se o usuário estiver logado -->
                     <?php if($userData): ?>
                         <li class="nav-item">
                             <a href="<?php $BASE_URL ?>newmovie.php" class="nav-link">
@@ -70,7 +70,7 @@
                         <li class="nav-item">
                             <a href="<?php $BASE_URL ?>logout.php" class="nav-link">Sair</a>
                         </li>
-                    <!-- Se o usuário estiver logado -->
+                    <!-- Nav, Se o usuário estiver logado -->
                     <?php else: ?>
                         <li class="nav-item">
                             <a href="<?php $BASE_URL ?>auth.php" class="nav-link">Entrar / Cadastrar</a>

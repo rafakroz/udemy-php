@@ -13,14 +13,14 @@ class User {
     public $bio;
     public $token;
 
-    //
+    // Função para geração do token
     public function generateToken() {
 
         return bin2hex(random_bytes(50));
 
     }
 
-    //
+    // Função para geração da hash do password
     public function generatePassword($password) {
 
         return password_hash($password, PASSWORD_DEFAULT);
@@ -30,7 +30,6 @@ class User {
 }
 
 // Métodos que o DAO poderá usar
-
 interface UserDAOInterface {
 
     // Vai construir o objeto
