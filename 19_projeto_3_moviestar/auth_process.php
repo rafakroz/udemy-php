@@ -71,4 +71,22 @@ if ($type === 'register') {
 
 } elseif ($type === 'login') {
 
+    $email = filter_input(INPUT_POST,'email');
+    $password = filter_input(INPUT_POST,'password');
+
+    // Tenta autenticar o usuário
+    if ($userDao->authenticateUser($email, $password)) {
+
+    // Redireciona o usuário, caso não consiga autenticar
+    } else {
+
+        $message->setMessage('Usuário e/ou senha incorretos!', 'error', 'back');
+
+    }
+
+} else {
+
+    // Caso um usuário esteja tentando passar dados maliciosos, não mapeados, um type inválido
+    $message->setMessage('Informações inválidas!', 'error', 'index.php');
+
 }

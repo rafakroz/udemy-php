@@ -103,8 +103,39 @@ class UserDAO implements UserDAOInterface {
 
     }
 
-    //
+    // Função para autentica o usuário no login
     public function authenticateUser($email, $password) {
+
+        $user = $this->findByEmail($email);
+
+        if ($user) {
+
+            // Verificar se as senhas estão corretas
+            if(password_verify($password, $user->password)) {
+
+                // Gera um token e insere na session
+                $token = $user->generateToken();
+
+                $this->setTokenToSession($token);
+
+                // Como o token está sendo gerado, é preiso atualizar token no usuário
+                $user->token = $token;
+
+                $this->update($user);
+
+                return true;
+
+            } else {
+
+                return false;
+
+            }
+
+        } else {
+
+            return false;
+
+        }
 
     }
 
