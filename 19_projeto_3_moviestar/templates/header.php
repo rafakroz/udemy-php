@@ -16,7 +16,7 @@
     $userDao = new UserDAO($conn, $BASE_URL);
 
     // Vai permitir que usuário não logado acessem o site
-    $userDao = $userDao->verifyToken(false);
+    $userData = $userDao->verifyToken(false);
 
 ?>
 
@@ -52,8 +52,25 @@
             </form>
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="navbar-nav">
-                    <?php if($userDao): ?>
-                    <p>Tá logado</p>
+                    <!-- Se o usuário estiver logado -->
+                    <?php if($userData): ?>
+                        <li class="nav-item">
+                            <a href="<?php $BASE_URL ?>newmovie.php" class="nav-link">
+                                <i class="far fa-plus-square"></i> Incluir Filme
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?php $BASE_URL ?>dashboard.php" class="nav-link">Meus Filmes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?php $BASE_URL ?>editprofile.php" class="nav-link bold">
+                                <?= $userData->name ?>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?php $BASE_URL ?>logout.php" class="nav-link">Sair</a>
+                        </li>
+                    <!-- Se o usuário estiver logado -->
                     <?php else: ?>
                         <li class="nav-item">
                             <a href="<?php $BASE_URL ?>auth.php" class="nav-link">Entrar / Cadastrar</a>

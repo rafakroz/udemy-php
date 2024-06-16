@@ -62,29 +62,30 @@ class UserDAO implements UserDAOInterface {
 
     public function verifyToken($protected = false) {
 
-            // Verificação se a sessão está com o token vazio
-        if(!empty($_SESSION['token'])) {
+        if(!empty($_SESSION["token"])) {
 
-        // Pega o token da session
-        $token = $_SESSION['token'];
+          // Pega o token da session
+          $token = $_SESSION["token"];
 
-        $user = $this->findByToken($token);
+          $user = $this->findByToken($token);
 
-            if ($user) {
+          if($user) {
+            return $user;
+          } else if($protected) {
 
-                return $user;
+            // Redireciona usuário não autenticado
+            $this->message->setMessage("Faça a autenticação para acessar esta página!", "error", "index.php");
 
-            } else if($protected) {
+          }
 
-                // Redireciona usuário não autenticado
-                $this->message->setMessage('Faça a autenticação para acessar esta página!', 'error', 'index.php');
+        } else if($protected) {
 
-            }
-        } else {
-            return false;
+          // Redireciona usuário não autenticado
+          $this->message->setMessage("Faça a autenticação para acessar esta página!", "error", "index.php");
+
         }
 
-    }
+      }
 
     public function setTokenToSession($token, $redirect = true) {
 
@@ -170,6 +171,16 @@ class UserDAO implements UserDAOInterface {
         } else {
             return false;
         }
+    }
+
+    public function destroyToken() {
+
+      // Remove o token da session
+      $_SESSION["token"] = "";
+
+      // Redirecionar e apresentar a mensagem de sucesso
+      $this->message->setMessage("Você fez o logout com sucesso!", "success", "index.php");
+
     }
 
     public function changePassword(User $user) {

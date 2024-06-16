@@ -1,5 +1,4 @@
 <?php
-
 class User {
 
     // Todos os campos do banco de dados
@@ -57,6 +56,9 @@ interface UserDAOInterface {
 
     // Encontrar o usuário pelo Id
     public function findById($id);
+
+    // Destruindo o Token
+    public function destroyToken();
 
     // Recebe o token
     public function findByToken($token);
