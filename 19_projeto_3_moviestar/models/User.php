@@ -13,6 +13,10 @@ class User {
     public $bio;
     public $token;
 
+    public function getFullName($user) {
+        return $user->name . ' ' . $user->lastname;
+    }
+
     // Função para geração do token
     public function generateToken() {
 
