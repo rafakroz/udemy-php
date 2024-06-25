@@ -32,37 +32,16 @@ class User {
 // Métodos que o DAO poderá usar
 interface UserDAOInterface {
 
-    // Vai construir o objeto
-    public function buildUser($data);
-
-    // Cria o usuário e permitirá fazer o login
-    public function create(User $user, $authUser = false);
-
-    // Atualizar usuário no sistema
-    public function update(User $user, $redirect = true);
-
-    // Verifica o token [False, fica sem proteção, sem rota protegida]
-    public function verifyToken($protected = false);
-
-    // Efetuando o login e redirecionando para uma página específica
-    public function setTokenToSession($token, $redirect = true);
-
-    // E-mail e password, junto com o Token, farão a autenticação completa
-    public function authenticateUser($email, $password);
-
-    // Encontrar o usuário pelo Email
-    public function findByEmail($email);
-
-    // Encontrar o usuário pelo Id
-    public function findById($id);
-
-    // Destruindo o Token
-    public function destroyToken();
-
-    // Recebe o token
-    public function findByToken($token);
-
-    // Alterar senha
-    public function changePassword(User $user);
+    public function buildUser($data); // Construir o objeto
+    public function create(User $user, $authUser = false); // Cria o usuário e permitirá fazer o login
+    public function update(User $user, $redirect = true); // Atualizar usuário
+    public function verifyToken($protected = false); // Verifica o token [Sem proteção, sem rota protegida]
+    public function setTokenToSession($token, $redirect = true); // Efetuando o login e redireciona usuário
+    public function authenticateUser($email, $password); // Autenticação com E-mail, password e Token
+    public function findByEmail($email); // Encontrar o usuário pelo Email
+    public function findById($id); // Encontrar o usuário pelo Id
+    public function destroyToken(); // Destrói o Token
+    public function findByToken($token); // Recebe o token
+    public function changePassword(User $user); // Alterar senha
 
 }
