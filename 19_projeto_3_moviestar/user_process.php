@@ -34,6 +34,48 @@
         $userData->email = $email;
         $userData->bio = $bio;
 
+        // Upload da imagem
+        if(isset($_FILES['image']) && !empty($_FILES['image']['tmp_name'])) {
+
+            // Trabalhando com apenas com um array
+            $image = $_FILES['image'];
+
+            $imageTypes = ['image/jpeg', 'image/jpg', 'image/png'];
+            $jpgArray = ['image/jpeg', 'image/jpg'];
+
+            // Checagem do tipo de imagem.
+            // Para ter certeza que estamos fazendo upload de imagem 
+            if (in_array($image['type'], $imageTypes)){
+
+                // Checar se é jpg
+                if (in_array($image['type'], $jpgArray)){
+
+                    $imageFile = imagecreatefromjpeg($image['tmp_name']);
+                    
+                // É png
+                } else {
+                    
+                    $imageFile = imagecreatefrompng($image['tmp_name']);
+
+                }
+
+                // Geração de noma da imagem
+                $imageName = $user->imageGenerateName();
+
+                // Criar a imagem jpg
+                imagejpeg($imageFile, './img/users/' . $imageName,100);
+
+                // salvando no banco o caminho da imagem, para poder acessar no edit
+                $userData->image = $imageName;            
+
+            } else {
+
+                $message->setMessage('Tipo inválido de imagem, insira jpg ou png!', 'error', 'back');
+            
+            }
+
+        }
+
         $userDao->update($userData);
             
     // Atualizar senha do usuário

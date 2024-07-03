@@ -11,6 +11,7 @@
 
     $fullName = $user->getFullName($userData);
 
+    // Altera para uma imagem padrão, caso o usuário não defina uma
     if($userData->image == '') {
         $userData->image = 'user.png';
     }
