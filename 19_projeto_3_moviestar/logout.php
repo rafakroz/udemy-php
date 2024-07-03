@@ -5,7 +5,7 @@
     // Usuário logado?
     if($userDao) {
 
-        // Caso não, destruir tpken
+        // Caso não, destruir token
         $userDao->destroyToken();
 
     }
