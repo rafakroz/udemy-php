@@ -49,7 +49,7 @@
                         <input type="file" class="form-control-file" name="image">
                     </div>
                     <div class="form-group">
-                        <label for="bio">Sobrenome:</label>
+                        <label for="bio">Sobre você:</label>
                         <textarea class="form-control" name="bio" id="bio" rows="5" placeholder="Faça um resumo sobre você..."><?= $userData->bio ?></textarea>
                     </div>
                 </div>
