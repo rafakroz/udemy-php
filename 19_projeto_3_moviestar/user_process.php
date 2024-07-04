@@ -39,7 +39,6 @@
 
             // Trabalhando com apenas com um array
             $image = $_FILES['image'];
-
             $imageTypes = ['image/jpeg', 'image/jpg', 'image/png'];
             $jpgArray = ['image/jpeg', 'image/jpg'];
 
